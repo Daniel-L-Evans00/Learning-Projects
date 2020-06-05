@@ -84,7 +84,36 @@ namespace Advanced_Learning
 
             Console.WriteLine("My birth day will always be: {0}", bDay);
 
+            WriteSomething();
+            WriteSomethingSpecific("Method2");
+            Console.WriteLine(Add(myInt, myInt2));
+            Console.WriteLine(Multiply(25,5));
+            Console.WriteLine(Subtract(100,10));
             Console.ReadKey(); //takes a single input of a string type
+        }
+        //access modifier, (Static), return type, method name (parameter1, parameter2)
+        public static void WriteSomething ()
+        {
+            Console.WriteLine("Method");
+        }
+        public static void WriteSomethingSpecific(string myText)
+        {
+            Console.WriteLine(myText);
+        }
+        public static int Add(int par1,int par2)
+        {
+            Console.WriteLine("The sum of {0} + {1} is:",par1,par2);
+            return par1 + par2;
+        }
+        public static int Multiply(int num1,int num2)
+        {
+            Console.WriteLine("The sum of {0} X {1} is:", num1, num2);
+            return num1 * num2;
+        }
+        public static int Subtract(int num1,int num2)
+        {
+            Console.WriteLine("The sum of {0} / {1} is:", num1, num2);
+            return num1 / num2;
         }
     }
 }
