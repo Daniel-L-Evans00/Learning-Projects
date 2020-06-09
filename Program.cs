@@ -89,6 +89,95 @@ namespace Advanced_Learning
             Console.WriteLine(Add(myInt, myInt2));
             Console.WriteLine(Multiply(25,5));
             Console.WriteLine(Subtract(100,10));
+
+            Console.WriteLine("Write something");
+            string input= Console.ReadLine();
+            Console.WriteLine(input);
+            Console.WriteLine("please input a number");
+            input = Console.ReadLine();
+            num1 = int.Parse (input);
+            Console.WriteLine("Please input another number");
+            input = Console.ReadLine();
+            num2 = int.Parse(input);
+            Console.WriteLine(Add(num1,num2));
+
+            Console.WriteLine("please enter a number");
+            input = Console.ReadLine();
+            try
+            {
+                num1 = int.Parse(input);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Format exception. please enter a number");
+                
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Error");
+            }
+            finally
+            {
+                Console.WriteLine("This is called anyways");
+            }
+            num1 = 5;
+            num2 = 0;
+            try
+            {
+                sum = num1 / num2;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("error");
+            }
+            //operators 
+            num2 = 3;
+            num3 = 0;
+            num3 = -num1;
+            Console.WriteLine("num3 is {0}",num3);
+            bool isSunny = true;
+            Console.WriteLine("is it sunny? {0}",!isSunny);
+            //increment operators 
+            num = 0;
+            num++;
+            Console.WriteLine("num is {0}",num);
+            Console.WriteLine("num is {0}", num++);//plus after makes it happen after code
+            Console.WriteLine("num is {0}", ++num); // plus before makes it happen first
+            //decrement operator
+            Console.WriteLine("num is {0}",num);
+            Console.WriteLine("num is {0}", num--);
+            Console.WriteLine("num is {0}", --num);
+
+            sum = num1 + num2;
+            Console.WriteLine("sum of {0} + {1} is {2}",num1,num2,sum);
+            sum = num1 - num2;
+            Console.WriteLine("sum of {0} - {1} is {2}", num1, num2, sum);
+            sum = num1 / num2;
+            Console.WriteLine("sum of {0} / {1} is {2}", num1, num2, sum);
+            sum = num1 * num2;
+            Console.WriteLine("sum of {0} X {1} is {2}", num1, num2, sum);
+            sum = num1 % num2;
+            Console.WriteLine("sum of {0} % {1} is {2}", num1, num2, sum);
+            // relational and type operators 
+            bool isLower;
+            isLower = num1 < num2;
+            Console.WriteLine("is num1 less than num2? {0}",isLower);
+            isLower = num1 > num2;
+            Console.WriteLine("is num1 greater than num2? {0}",isLower);
+            bool isEqual;
+            isEqual = num1 == num2;
+            Console.WriteLine("is num1 equal too num2? {0}",isEqual);
+            isEqual = num1 != num2;
+            Console.WriteLine("is num1 not rqual too num2? {0}",isEqual);
+            //conditional operators
+            bool isLowerAndSunny;
+            isLowerAndSunny = isLower && isSunny;
+            Console.WriteLine("result of isLower && isSunny is {0}",isLowerAndSunny);
+            isLowerAndSunny = isLower || isSunny;
+            Console.WriteLine("result of isLower || isSunny is {0}", isLowerAndSunny);
+
+
+
             Console.ReadKey(); //takes a single input of a string type
         }
         //access modifier, (Static), return type, method name (parameter1, parameter2)
